@@ -21,10 +21,32 @@ Payroll ac[]=new Payroll[50];
 Scanner sc=new Scanner(System.in);
 System.out.println("Please enter the employee name:");
 //add code
+
+String employee;
+double salary;
+
+
+employee=sc.nextLine();
 System.out.println("Please enter the salary: salary <=3000");
-       
-System.out.println("The final Salary including bonus is: ");         
+  salary=sc.nextDouble();
+
+//salary validation
+while(salary>3000){
+    System.out.println("Please enter salary <=3000");
+    salary=sc.nextDouble();
+}
+
+Payroll self=new Payroll(salary,employee);
+
+System.out.println("The final Salary of  "+self.getEmp()+" is "+self.finalSalary(salary));
 
 }
 
 }
+
+
+
+
+
+
+

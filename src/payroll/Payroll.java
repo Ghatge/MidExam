@@ -32,16 +32,24 @@ public class Payroll
      /**The getter for the Salary
      * @return the Salary
      */
-        public double getSalary() 
+        public double getSalary(double finalSalary) 
         {
-        return Salary;
+         
+                 return Salary;
         }
-
+        
+        
+          public double finalSalary(double Salary){
+        double newSalary=Salary+(Salary*0.10);
+        return newSalary;
+          }
+          
     /*The getter for bonus
      * @return the bonus*/
-     
+       
         public double getBonus() 
         {
+            
             return bonus;
         }
 
